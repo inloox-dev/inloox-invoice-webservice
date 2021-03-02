@@ -19,16 +19,19 @@ a webservice that writes data to InLoox.ODataClient nuget package https://www.nu
 To trigger the workflow, POST a request to https://localhost:5001/invoice
 
 Headers:
-Content-Type: application/json
-access_token: {INSERT_ACCESS_TOKEN_HERE}
+
+`Content-Type: application/json`
+`access_token: {INSERT_ACCESS_TOKEN_HERE}`
 
 Body:
+```yaml
 {
-	"InvoiceNumber" : "12345/2021",
-	"AmountEur" : 17.55,
-	"BudgetPositionId" : {INSERT_BUDGET_POSITION_ID_HERE},	
-	"AttachmentLink" : "https://www.inloox456.com"
+  "InvoiceNumber" : "12345/2021",
+  "AmountEur" : 17.55,
+  "BudgetPositionId" : {INSERT_BUDGET_POSITION_ID_HERE},
+  "AttachmentLink" : "https://www.inloox456.com"
 }
+```
 
 You should see a 200 response.
 
