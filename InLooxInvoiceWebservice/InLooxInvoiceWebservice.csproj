@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>3f674fbe-daf2-4e46-8950-fd292e22f90a</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="InLoox.ODataClient" Version="10.0.4" />
+  </ItemGroup>
+
+</Project>
