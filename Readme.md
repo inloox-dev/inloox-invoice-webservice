@@ -5,7 +5,7 @@ a webservice that writes data to InLoox.ODataClient nuget package https://www.nu
 ## Setup
 
 1. Create an InLoox now! account here: https://app.inlooxnow.com/Account/CreateAndLogin
-2. Create at least one budget with a budget position item in it
+2. Create at least one expense-type budget with a budget position item in it (copy the BudgetPositionId value)
 3. Obtain a token
 - go to https://app.inlooxnow.com/tests/oauth2
 - click the "Authorize" button
@@ -21,6 +21,7 @@ To trigger the workflow, POST a request to https://localhost:5001/invoice
 Headers:
 
 `Content-Type: application/json`
+
 `access_token: {INSERT_ACCESS_TOKEN_HERE}`
 
 Body:
