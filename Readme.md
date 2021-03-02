@@ -11,11 +11,26 @@ a webservice that writes data to InLoox.ODataClient nuget package https://www.nu
 - click the "Authorize" button
 - copy the value of the "Access Token" field
 4. Run the code in debug mode in a local environment
-5. Navigate to: https://localhost:5001/new-invoice/?access_token={INSERT_ACCESS_TOKEN_HERE}
-   Replace ***{INSERT_ACCESS_TOKEN_HERE}*** by the access token you copied in step 3.
-6. You should see an 200 OK response
 
 **Important note:** Sharing an access token is equivalent to sharing username and password for an account.
+
+## Use
+
+To trigger the workflow, POST a request to https://localhost:5001/invoice
+
+Headers:
+Content-Type: application/json
+access_token: {INSERT_ACCESS_TOKEN_HERE}
+
+Body:
+{
+	"InvoiceNumber" : "12345/2021",
+	"AmountEur" : 17.55,
+	"BudgetPositionId" : {INSERT_BUDGET_POSITION_ID_HERE},	
+	"AttachmentLink" : "https://www.inloox456.com"
+}
+
+You should see a 200 response.
 
 ## Deployment
 
